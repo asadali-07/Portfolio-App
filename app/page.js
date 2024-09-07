@@ -51,7 +51,7 @@ function Home() {
         </div>
         <div className="w-full md:w-2/3 lg:w-1/2">
           <h1 className="text-4xl font-bold mb-4 text-purple-500">I am a <span  ref={el}></span></h1>
-          <p className="text-xl mb-2">"Passionate Full-Stack Developer with expertise in front-end design, back-end development, and scalable web solutions. I create impactful, efficient websites and applications that bring ideas to life. Lets collaborate to turn your vision into reality</p>
+          <p className="text-xl mb-2">"Passionate Full-Stack Developer with expertise in front-end design, back-end development, and scalable web solutions I create impactful, efficient websites and applications that bring ideas to life Lets collaborate to turn your vision into reality</p>
           <h3 className="text-xl font-semibold mb-4 text-purple-500">SKILLS JAVA,PYTHON,HTML,CSS,JAVASCRIPT,EXPRESS JS,MONGODB,SQL,GIT,GITHUB,REACT JS,NEXT JS,BOOTSTRAP,TAILWIND,MATERIAL UI,SHAIDEN UI</h3>
           <div className="flex justify-center gap-6">
           <Button asChild>
