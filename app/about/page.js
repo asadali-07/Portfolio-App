@@ -21,7 +21,7 @@ const AboutPage = () => {
           <h1 className="text-3xl font-bold mb-2 text-purple-500">Asad Ali</h1>
           <p className=" mb-4">FullStack Developer(MERN)</p>
           <p className=" text-center">
-          "Passionate Full-Stack Developer with expertise in front-end design, back-end development, and scalable web solutions. I create impactful, efficient websites and applications that bring ideas to life. Let’s collaborate to turn your vision into reality."
+          "Passionate Full-Stack Developer with expertise in front-end design back-end development and scalable web solutions. I create impactful efficient websites and applications that bring ideas to life. Lets collaborate to turn your vision into reality"
           </p>
         </div>
       </motion.div>
