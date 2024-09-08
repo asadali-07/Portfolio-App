@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const AboutPage = () => {
   return (
@@ -13,9 +14,11 @@ const AboutPage = () => {
         whileHover={{ scale: 1.05 }}
       >
         <div className="flex flex-col text-purple-400 items-center">
-          <img
+          <Image
            src="/WhatsApp Image 2024-09-07 at 5.31.19 PM.jpeg"
             alt="Profile"
+            height={'128'}
+            width={'128'}
             className="w-32 h-32 rounded-full mb-4"
           />
           <h1 className="text-3xl font-bold mb-2 text-purple-500">Asad Ali</h1>

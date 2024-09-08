@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import Typed from 'typed.js';
 import { useEffect,useRef ,useState} from 'react';
-
+import Image from 'next/image';
 
 function Home() {
   const  [form, setform] = useState({
@@ -42,11 +42,12 @@ function Home() {
     <div className="container mx-auto px-6 text-center">
       <div className="flex flex-col md:flex-row items-center justify-center">
         <div className="w-full md:w-1/2 flex justify-center">
-          <img
+          <Image
             src="/WhatsApp Image 2024-09-07 at 5.31.19 PM.jpeg"
             alt="Profile"
-            className="w-full md:w-1/2 rounded-full border-purple-400 border-4"
-            style={{ width: '300px', height: '300px' }}
+            height={'300'}
+            width={'300'}
+            className="w-full md:w-1/2 rounded-full border-purple-400 border-4 mb-4"
           />
         </div>
         <div className="w-full md:w-2/3 lg:w-1/2">
@@ -72,27 +73,27 @@ function Home() {
       <h2 className="text-4xl text-purple-500 font-bold text-center mb-12">My Top 3 Projects</h2>
       <div className="flex flex-wrap gap-6 justify-center">
         <div className=" rounded-lg flex flex-col justify-center items-center shadow-lg p-6 w-96 transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-2xl hover:border hover:border-purple-400 dark:border border-gray-600">
-          <img src="/Screenshot 2024-09-07 175435.png" alt="Project 1" className="w-full h-48 object-cover rounded-t-lg" />
+          <Image src="/Screenshot 2024-09-07 175435.png" alt="Project 1" width={'400'} height={'192'} className="w-full h-48 object-cover rounded-t-lg" />
           <h3 className="text-2xl font-semibold text-purple-500 mt-4">Wanderlust</h3>
-          <p className=" mt-2 mb-4 text-center">Developed a hotel listing platform with features for browsing,filtering,lisiting hotel,integrating user accounts,and customer review stytem for best user experience.<b>Using Express js and Ejs Templet and more npm pakages(Passport Multter couldinary)</b>.</p>
+          <p className=" mt-2 mb-4 text-center">Developed a hotel listing platform with features for browsing,filtering,lisiting hotel,integrating user accounts,and customer review stytem for best user experience.<b>Using Express js and Ejs Templet and more npm pakages(Passport Multter cloudinary)</b>.</p>
           <Button asChild>
        <Link href="https://wanderlust-gxsq.onrender.com/listings">View Projects</Link>
           </Button>
         </div>
         <div className=" rounded-lg flex flex-col justify-center items-center shadow-lg p-6 w-96 transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-2xl hover:border hover:border-purple-400 dark:border  border-gray-600">
-          <img src="/Screenshot 2024-09-07 181205.png" alt="Project 2" className="w-full h-48 object-cover rounded-t-lg" />
+          <Image src="/Screenshot 2024-09-07 181205.png" alt="Project 2"  width={'400'} height={'192'} className="w-full h-48 object-cover rounded-t-lg" />
           <h3 className="text-2xl font-semibold text-purple-500 mt-4">Get Me Coffee</h3>
-          <p className=" mt-2 mb-4">Created a platform where followers can financially support their favorite creators. Integrated user accounts, secure transactions contributions.<b>Using Express js and Next js and more npm pakages(Authjs Multter Couldinary Rozarpay api MongoDb)</b>.</p>
+          <p className=" mt-2 mb-4">Created a platform where followers can financially support their favorite creators. Integrated user accounts, secure transactions contributions.<b>Using Express js and Next js and more npm pakages(Authjs Multter Cloudinary Rozarpay api MongoDb)</b>.</p>
           <Button asChild>
        <Link href="/project">View Projects</Link>
           </Button>
         </div>
         <div className=" rounded-lg flex flex-col justify-center items-center shadow-lg p-6 w-96 transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-2xl hover:border hover:border-purple-400 dark:border  border-gray-600">
-          <img src="/Screenshot 2024-09-07 180838.png" alt="Project 2" className="w-full h-48 object-cover rounded-t-lg" />
+          <Image src="/Screenshot 2024-09-07 180838.png" alt="Project 2"  width={'400'} height={'192'} className="w-full h-48 object-cover rounded-t-lg" />
           <h3 className="text-2xl font-semibold text-purple-500 mt-4">AsadBlog</h3>
           <p className=" mt-2 mb-4">Developed and managed a blog platform, AsadBlog,User can read blog and login ans sign up.<b>Using Next js and Tailwind and with functionlity of dark light mode npm pakages(fs,rehype-pretty-code,react-top-loader,typed.js shaiden UI)</b>.</p>
           <Button asChild>
-       <Link href="/project">View Projects</Link>
+       <Link href="https://asad-blog.vercel.app/">View Projects</Link>
           </Button>
         </div>
       </div>

@@ -111,7 +111,7 @@ const Navbar = () => {
             About
           </Link>
           <Link
-            href="/about"
+            href="/project"
             className=" text-purple-400 hover:scale-105 hover:font-semibold transition-transform duration-300"
           >
             Project

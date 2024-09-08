@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
+import Image from 'next/image';
 
 const projects = [
   {
@@ -76,7 +77,7 @@ const Project = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover rounded-t-lg mb-2" />
+            <Image src={project.imageUrl} alt={project.title} height={'192'} width={'400'} className="w-full h-48 object-cover rounded-t-lg mb-2" />
             <h2 className="text-2xl font-bold mb-2 text-purple-500">{project.title}</h2>
             <p className=" mb-4">{project.description}</p>
             <Button asChild>
