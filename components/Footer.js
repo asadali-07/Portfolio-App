@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {
   return (
-    <footer className="bg-background/50 backdrop-blur border-t sticky bottom-0 py-1">
+    <footer className="bg-background/50 backdrop-blur border-t bottom-0 py-1">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-around">
           <div className="w-full sm:w-1/2 mb-1">
