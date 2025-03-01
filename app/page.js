@@ -63,23 +63,23 @@ function Home() {
           <h3 className="text-2xl font-semibold text-purple-500 mt-4">Wanderlust</h3>
           <p className=" mt-2 mb-4 text-center">Developed a hotel listing platform with features for browsing,filtering,lisiting hotel,integrating user accounts,and customer review stytem for best user experience.<b>Using Express js and Ejs Templet and more npm pakages(Passport Multter cloudinary)</b>.</p>
           <Button asChild>
-       <Link href="https://wanderlust-gxsq.onrender.com/listings">View Projects</Link>
+       <Link href="https://wanderlust-gxsq.onrender.com/listings" target="_blank" rel="noopener noreferrer" >View Projects</Link>
           </Button>
         </div>
         <div className=" rounded-lg flex flex-col justify-center items-center shadow-lg p-6 w-96 transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-2xl hover:border hover:border-purple-400 dark:border  border-gray-600">
-          <Image src="/Screenshot 2024-09-07 181205.png" alt="Project 2"  width={'400'} height={'192'} className="w-full h-48 object-cover rounded-t-lg" />
-          <h3 className="text-2xl font-semibold text-purple-500 mt-4">Get Me Coffee</h3>
-          <p className=" mt-2 mb-4">Created a platform where followers can financially support their favorite creators. Integrated user accounts, secure transactions contributions.<b>Using Express js and Next js and more npm pakages(Authjs Multter Cloudinary Rozarpay api MongoDb)</b>.</p>
+          <Image src="/Screenshot 2025-03-01 165004.png" alt="Project 2"  width={'400'} height={'192'} className="w-full h-48 object-cover rounded-t-lg" />
+          <h3 className="text-2xl font-semibold text-purple-500 mt-4">SANS-AI</h3>
+          <p className="mt-2 mb-4 text-center">Developed a platform to assist users in enhancing their career growth through AI-driven tools. Features like interview prep,resume building and cover letter.<b>Using Next.js,Clerk,Inngest,Prisma,NeonDb,Google Gemini Api,tailwind css,shadecn ui</b></p>
           <Button asChild>
-       <Link href="/project">View Projects</Link>
+       <Link href="https://sans-ai-gold.vercel.app/" target="_blank" rel="noopener noreferrer">View Projects</Link>
           </Button>
         </div>
         <div className=" rounded-lg flex flex-col justify-center items-center shadow-lg p-6 w-96 transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-2xl hover:border hover:border-purple-400 dark:border  border-gray-600">
           <Image src="/Screenshot 2024-09-07 180838.png" alt="Project 2"  width={'400'} height={'192'} className="w-full h-48 object-cover rounded-t-lg" />
           <h3 className="text-2xl font-semibold text-purple-500 mt-4">AsadBlog</h3>
-          <p className=" mt-2 mb-4">Developed and managed a blog platform, AsadBlog,User can read blog and login ans sign up.<b>Using Next js and Tailwind and with functionlity of dark light mode npm pakages(fs,rehype-pretty-code,react-top-loader,typed.js shaiden UI)</b>.</p>
+          <p className=" mt-2 mb-4 text-center">Developed and managed a blog platform, AsadBlog,User can read blog and login ans sign up.<b>Using Next js and Tailwind and with functionlity of dark light mode npm pakages(fs,rehype-pretty-code,react-top-loader,typed.js shaiden UI)</b>.</p>
           <Button asChild>
-       <Link href="https://asad-blog.vercel.app/">View Projects</Link>
+       <Link href="https://asad-blog.vercel.app/" target="_blank" rel="noopener noreferrer">View Projects</Link>
           </Button>
         </div>
       </div>
