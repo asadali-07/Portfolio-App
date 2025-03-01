@@ -38,8 +38,8 @@ const Navbar = () => {
       />
       <div className="container mx-auto flex justify-around items-center">
         <div className=" text-lg font-bold  flex justify-center items-center gap-3 text-purple-500">
-          <Image src="/resume.png" width={30} height={30} className="rotate-6"/>
-        <Link href="/" className="text-2xl"><i>AsadAli</i></Link>
+          <Image src="/resume.png" width={30} height={30} className="animate-bounce"/>
+        <Link href="/" className="text-2xl animate-bounce"><i>AsadAli</i></Link>
         </div>
         <div className="hidden md:flex space-x-6 items-center">
           <Link
