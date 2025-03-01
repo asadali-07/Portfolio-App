@@ -75,9 +75,9 @@ function Home() {
           </Button>
         </div>
         <div className=" rounded-lg flex flex-col justify-center items-center shadow-lg p-6 w-96 transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-2xl hover:border hover:border-purple-400 dark:border  border-gray-600">
-          <Image src="/Screenshot 2024-09-07 180838.png" alt="Project 2"  width={'400'} height={'192'} className="w-full h-48 object-cover rounded-t-lg" />
-          <h3 className="text-2xl font-semibold text-purple-500 mt-4">AsadBlog</h3>
-          <p className=" mt-2 mb-4 text-center">Developed and managed a blog platform, AsadBlog,User can read blog and login ans sign up.<b>Using Next js and Tailwind and with functionlity of dark light mode npm pakages(fs,rehype-pretty-code,react-top-loader,typed.js shaiden UI)</b>.</p>
+          <Image src="/Screenshot 2025-03-01 181242.png" alt="Project 2"  width={'400'} height={'192'} className="w-full h-48 object-cover rounded-t-lg" />
+          <h3 className="text-2xl font-semibold text-purple-500 mt-4">Blog App</h3>
+          <p className=" mt-2 mb-4 text-center">Developed and managed a blog platform, Blog,User can read blog about softrware development .<b>Using Next js and Tailwind and with functionlity of dark light mode npm pakages(fs,rehype-pretty-code,react-top-loader,typed.js shaiden UI)</b>.</p>
           <Button asChild>
        <Link href="https://asad-blog.vercel.app/" target="_blank" rel="noopener noreferrer">View Projects</Link>
           </Button>
