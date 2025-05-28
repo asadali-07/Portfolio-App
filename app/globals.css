@@ -71,11 +71,4 @@
     @apply bg-background text-foreground;
   }
 }
-.card {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
 
-.card.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
