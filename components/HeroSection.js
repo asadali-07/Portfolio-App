@@ -13,10 +13,10 @@ const HeroSection = () => {
     const typed = new Typed(el.current, {
       strings: [
         "Web Developer",
-        "Front-End Developer",
-        "Back-End Developer",
-        "Full-Stack Developer",
-        "MERN Stack Developer",
+        "Front-End Dev",
+        "Back-End Dev",
+        "Full-Stack Dev",
+        "MERN Stack Dev",
       ],
       typeSpeed: 50,
       backSpeed: 30,

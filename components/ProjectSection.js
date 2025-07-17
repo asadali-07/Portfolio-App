@@ -187,7 +187,7 @@ const ProjectSection = () => {
             <div className="w-full overflow-hidden rounded-lg mb-4">
               <motion.div variants={imageVariants} whileHover="hover">
                 <Image
-                  src="/Screenshot 2025-03-01 181242.png"
+                  src="/Screenshot 2025-07-18 004125.png"
                   alt="Project 3"
                   width={400}
                   height={192}
@@ -202,7 +202,7 @@ const ProjectSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              Blog App
+              Aximo
             </motion.h3>
             
             <motion.p 
@@ -211,13 +211,10 @@ const ProjectSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              Developed and maintained a blog platform for reading about
-              software development topics.
+            Built Aximo, a no-code builder that lets users create and deploy static websites using HTML, CSS, and JavaScript—no coding required
               <b>
                 {" "}
-                Built with Next.js, Tailwind CSS, and features like dark/light
-                mode using packages like fs, rehype-pretty-code,
-                react-top-loader, typed.js, Shadcn UI.
+                Built with React.js, Tailwind CSS, and backend with Express using Google Gemini API features like Live Preview, Publishing Websites Live on Netlify.
               </b>
             </motion.p>
             
@@ -227,7 +224,7 @@ const ProjectSection = () => {
             >
               <Button asChild className="bg-blue-500 hover:bg-blue-600 text-white">
                 <Link
-                  href="https://asad-blog.vercel.app/"
+                  href="https://aximo-ai.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
