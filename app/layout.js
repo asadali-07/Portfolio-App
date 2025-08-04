@@ -1,40 +1,34 @@
-import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import LenisWrapper from "@/components/LenisWrapper";
+import ScrollProgress from "@/components/ScrollProgress";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio",
-  description: "A Personal portfolio App",
+  title: "Asad Ali - Full Stack Developer",
+  description: "Portfolio of Asad Ali, a passionate full-stack developer specializing in MERN stack development.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
         <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Navbar/>
-        {children}
-        <Footer/>
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LenisWrapper>
+            <ScrollProgress />
+            <Navbar />
+            {children}
+            <Footer />
+          </LenisWrapper>
         </ThemeProvider>
       </body>
     </html>

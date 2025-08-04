@@ -67,7 +67,7 @@ export default function SkillsSection() {
   });
 
   return (
-    <section id="skills" className="py-16 px-4 bg-gradient-to-b from-white/5 to-blue-50/5 dark:from-gray-900/10 dark:to-blue-900/5 backdrop-blur-sm">
+    <section className="py-16 px-4 bg-gradient-to-b from-white/5 to-blue-50/5 dark:from-gray-900/10 dark:to-blue-900/5 backdrop-blur-sm">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           ref={ref}

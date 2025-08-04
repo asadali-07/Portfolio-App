@@ -58,7 +58,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20">
+    <section className="py-20">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           className="max-w-4xl mx-auto p-8 rounded-xl shadow-lg bg-white/5 backdrop-blur-sm border border-transparent dark:border-gray-800 hover:border-blue-400 transition-all duration-300"

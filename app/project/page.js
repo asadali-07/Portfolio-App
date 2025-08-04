@@ -2,6 +2,11 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import {SiSocketdotio, SiNextdotjs, SiPrisma } from "react-icons/si";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { GiMagicHat } from "react-icons/gi"; // for GSAP (no official icon)
+import { VscSymbolNamespace } from "react-icons/vsc"; // for Vector DB (generic DB fallback)
+
 import {
   FaGithub,
   FaCode,
@@ -10,6 +15,7 @@ import {
   FaHtml5,
   FaCss3,
   FaBootstrap,
+  FaEye,
 } from "react-icons/fa";
 import {
   SiMongodb,
@@ -20,11 +26,65 @@ import {
 
 const projects = [
   {
+    title: "VibeTalks",
+    description:
+      "A real-time chat application using socket.io. Built with Express and React, Tailwind Css, MongoDb and Zustand using RESTful API principles.",
+    githubLink: "https://github.com/asadali-07/chatapp-frontend", 
+    liveLink: "https://vibetalks.netlify.app/",
+    imageUrl: "/vibetalks.png",
+    techStack: ["react", "tailwind", "mongodb","zustand","socket.io","express"],
+  },
+  {
+    title: "LuxePerfume Store",
+    description:
+      "A luxurious perfume e-commerce landing page designed to showcase premium fragrances and user-centric product layout.",
+    githubLink: "https://github.com/asadali-07/influencer-starup-website", 
+    liveLink: "https://2407luxeperfume.netlify.app/",
+    imageUrl: "/luxeperfume.png", 
+    techStack: ["react", "tailwind", "zustand","framer-motion","gsap"],
+  },
+  {
+    title: "URL Shortener",
+    description:
+      "A URL shortening service that converts long URLs into short, shareable links. Built using MERN stack with Vercel deployment.",
+    githubLink: "https://github.com/asadali-07/UrlShortner", 
+    liveLink: "https://url-shortner-eight-eta.vercel.app/",
+    imageUrl: "/url-shortner.png", 
+    techStack: ["nextjs","mongodb"],
+  },
+  {
+    title: "Asad's Blog",
+    description:
+      "A personal blog platform to share technical articles and project insights. Built with Next.js and Markdown support.",
+    githubLink: "https://github.com/asadali-07/BlogApp", 
+    liveLink: "https://asad-blog.vercel.app/",
+    imageUrl: "/asad-blog.png", 
+    techStack: ["nextjs", "react", "tailwind","prisma-highlighter"],
+  },
+  {
+    title: "Terminal Portfolio",
+    description:
+      "A terminal-style personal portfolio with animated background and command-line interface to explore skills, projects, and contact info.",
+    githubLink: "https://github.com/asadali-07/terminal-portfolio", 
+    liveLink: "https://terminal-portfolio-phi-ten.vercel.app/",
+    imageUrl: "/terminal-portfolio.png", 
+    techStack: ["react", "tailwind", "framer-motion"],
+  },
+  {
+    title: "Recommendation ",
+    description:
+      "A Product recommendation system when user add product in cart then similar products shows using vector db",
+    githubLink: "https://github.com/asadali-07", 
+    liveLink: "https://github.com/asadali-07", 
+    imageUrl: "/recommendationsystem.png", 
+    techStack: ["react", "tailwind", "vectordb","longchain"],
+  },
+  {
     title: "PassOP",
     description:
       "A password manager that securely stores website URLs, usernames, and passwords using MongoDB, Express, and React.",
-
     githubLink: "https://github.com/asadali-07/PasswordManager",
+    liveLink: "https://passsop.netlify.app/",
     imageUrl: "/Screenshot 2024-09-07 181548.png",
     techStack: ["react", "express", "mongodb", "node"],
   },
@@ -32,8 +92,8 @@ const projects = [
     title: "iTask",
     description:
       "A todo app with task management capabilities including marking tasks as done and filtering incomplete tasks. Built with Express, MongoDB and React.",
-
     githubLink: "https://github.com/asadali-07/ToDoApp",
+    liveLink: "http://itassk.netlify.app/",
     imageUrl: "/Screenshot 2024-09-07 181829.png",
     techStack: ["react", "express", "mongodb", "node"],
   },
@@ -41,8 +101,8 @@ const projects = [
     title: "Music Player",
     description:
       "An interactive music player with playback controls, duration adjustment, and volume control. Built with HTML, CSS, JavaScript, and Bootstrap.",
-
     githubLink: "https://github.com/asadali-07/SpotifyClone",
+    liveLink: "https://github.com/asadali-07/SpotifyClone",
     imageUrl: "/Screenshot 2024-09-07 182348.png",
     techStack: ["html", "css", "javascript", "bootstrap"],
   },
@@ -51,6 +111,7 @@ const projects = [
     description:
       "A weather application that provides forecasts for any city. Built with Tailwind CSS and React, using a weather API for backend data.",
     githubLink: "https://github.com/asadali-07/minorproject",
+    liveLink: "http://iweatherr.netlify.app/",
     imageUrl: "/Screenshot 2024-09-07 182100.png",
     techStack: ["react", "tailwind", "javascript"],
   },
@@ -59,14 +120,16 @@ const projects = [
     description:
       "A memory game that tests pattern recognition skills. Built with HTML, CSS, and JavaScript, demonstrating DOM manipulation concepts.",
     githubLink: "https://github.com/asadali-07/SimonGame",
+    liveLink: "https://github.com/asadali-07/SimonGame",
     imageUrl: "/Screenshot 2024-09-07 182936.png",
     techStack: ["html", "css", "javascript"],
   },
   {
-    title: "Chat App",
+    title: "Chat App Without Socket.io",
     description:
       "A real-time chat application with message editing and deletion capabilities. Built with Express and EJS templates using RESTful API principles.",
     githubLink: "https://github.com/asadali-07/chat-app",
+    liveLink: "https://github.com/asadali-07/chat-app",
     imageUrl: "/Screenshot 2024-09-07 183741.png",
     techStack: ["express", "node", "javascript"],
   },
@@ -75,6 +138,7 @@ const projects = [
     description:
       "A social networking application with user search functionality and detailed profile views. Implements Express RESTful APIs for data handling.",
     githubLink: "https://github.com/asadali-07/Instagram",
+    liveLink: "https://github.com/asadali-07/Instagram",
     imageUrl: "/Screenshot 2024-09-07 215534.png",
     techStack: ["express", "node", "javascript", "mongodb"],
   },
@@ -83,6 +147,7 @@ const projects = [
     description:
       "A CSS-only hamburger menu implementation, showcasing CSS checkbox functionality and absolute positioning techniques.",
     githubLink: "https://github.com/asadali-07/SidebarMenu",
+    liveLink: "https://github.com/asadali-07/SidebarMenu",
     imageUrl: "/Screenshot 2024-09-07 182858.png",
     techStack: ["html", "css"],
   },
@@ -91,14 +156,15 @@ const projects = [
     description:
       "A responsive pricing section featuring three membership tiers, styled with Bootstrap for a clean, modern look.",
     githubLink: "https://github.com/asadali-07/SubscriptionCard",
+    liveLink: "https://github.com/asadali-07/SubscriptionCard",
     imageUrl: "/Screenshot 2024-09-07 183112.png",
     techStack: ["html", "css", "bootstrap"],
-  },
+  }
 ];
 
-// Function to get the appropriate tech icon
+
 const getTechIcon = (tech) => {
-  switch (tech) {
+  switch (tech.toLowerCase()) {
     case "react":
       return <FaReact className="text-blue-400" />;
     case "node":
@@ -117,10 +183,24 @@ const getTechIcon = (tech) => {
       return <FaBootstrap className="text-purple-600" />;
     case "tailwind":
       return <SiTailwindcss className="text-teal-400" />;
+    case "socket.io":
+      return <SiSocketdotio className="text-gray-700" />;
+    case "framer-motion":
+      return <TbBrandFramerMotion className="text-pink-400" />;
+    case "gsap":
+      return <GiMagicHat className="text-green-400" />; 
+    case "nextjs":
+      return <SiNextdotjs className="text-white" />;
+    case "prisma":
+    case "prisma-highlighter":
+      return <SiPrisma className="text-indigo-500" />;
+    case "vectordb":
+      return <VscSymbolNamespace className="text-cyan-400" />;
     default:
       return <FaCode className="text-gray-400" />;
   }
 };
+
 
 const Project = () => {
   const [filter, setFilter] = useState("all");
@@ -261,6 +341,17 @@ const Project = () => {
                         >
                           <FaGithub size={18} />
                         </motion.a>
+                        <motion.a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full text-white shadow-lg"
+                          whileHover={{ scale: 1.1, rotate: -5 }}
+                          whileTap={{ scale: 0.9 }}
+                          aria-label="Live Demo"
+                        >
+                          <FaEye size={18} />
+                        </motion.a>
                       </div>
                     </div>
                   </div>
@@ -295,30 +386,9 @@ const Project = () => {
                     </div>
                   </div>
 
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-2 line-clamp-3 leading-relaxed">
                     {project.description}
                   </p>
-
-                  <div className="pt-2 border-t border-blue-100/10 dark:border-blue-900/10 flex justify-between items-center">
-                    <span className="text-xs text-blue-400/70 dark:text-blue-400/70 font-medium">
-                      View project for more details
-                    </span>
-                    <motion.svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-blue-400 group-hover:translate-x-1 transition-transform duration-300"
-                    >
-                      <path d="M5 12h14"></path>
-                      <path d="M12 5l7 7-7 7"></path>
-                    </motion.svg>
-                  </div>
                 </div>
               </motion.div>
             ))}

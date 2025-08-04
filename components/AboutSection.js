@@ -12,7 +12,7 @@ const AboutSection = () => {
   ]
   
   return (
-    <section id="about" className="py-20 px-4">
+    <section  className="py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         <motion.div 
           className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center"

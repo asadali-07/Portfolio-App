@@ -43,7 +43,7 @@ const ProjectSection = () => {
   }
 
   return (
-    <section id="projects" className="py-20">
+    <section  className="py-20">
       <div className="container mx-auto px-6">
         <motion.h2 
           className="text-4xl text-blue-500 font-bold text-center mb-12"

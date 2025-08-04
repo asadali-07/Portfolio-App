@@ -12,11 +12,10 @@ const HeroSection = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Web Developer",
-        "Front-End Dev",
-        "Back-End Dev",
-        "Full-Stack Dev",
-        "MERN Stack Dev",
+        "Web Dev",
+        "Frontend Dev",
+        "Backend Dev",
+        "FullStack Dev",
       ],
       typeSpeed: 50,
       backSpeed: 30,

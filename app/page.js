@@ -9,11 +9,17 @@ import AboutSection from "@/components/AboutSection";
 function Home() {
   return (
     <>
-      <HeroSection />
-      <SkillsSection />
-      <ProjectSection />
-      <ContactSection />
-      <AboutSection />
+      <div className="flex flex-col justify-between overflow-hidden">
+          <HeroSection />
+        <section id="about">
+          <AboutSection />
+        </section>
+          <SkillsSection />
+          <ProjectSection />
+        <section id="contact">
+          <ContactSection />
+        </section>
+      </div>
     </>
   );
 }

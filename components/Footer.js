@@ -158,7 +158,7 @@ const Footer = () => {
                 />
               </motion.a>
               <motion.a 
-                href="https://linkedin.com/in/mohdasadali" 
+                href="https://linkedin.com/in/mohd-asad-ali-1a7693257" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative bg-gradient-to-br from-blue-600 to-blue-700 p-3 rounded-full text-white shadow-md hover:shadow-lg"
