@@ -76,7 +76,7 @@ const projects = [
       "A Product recommendation system when user add product in cart then similar products shows using vector db",
     githubLink: "https://github.com/asadali-07", 
     liveLink: "https://github.com/asadali-07", 
-    imageUrl: "/recommendationsystem.png", 
+    imageUrl: "/recommendationSystem.png", 
     techStack: ["react", "tailwind", "vectordb","longchain"],
   },
   {
