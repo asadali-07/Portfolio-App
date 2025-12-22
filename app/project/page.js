@@ -159,6 +159,14 @@ const projects = [
     liveLink: "https://github.com/asadali-07/SubscriptionCard",
     imageUrl: "/Screenshot 2024-09-07 183112.png",
     techStack: ["html", "css", "bootstrap"],
+  },
+  {
+    title: "Wanderlust Travel Site",
+    description:"Built a modern hotel listing platform enabling seamless browsing, smart filtering, secure user accounts, and customer reviews.",
+    githubLink: "https://github.com/asadali-07/Wanderlust",
+    liveLink: "https://wanderlust-gxsq.onrender.com/listings",
+    imageUrl: "/Screenshot 2024-09-07 175435.png",
+    techStack: ["express", "ejs", "node", "mongodb","css","html","passport.js","multer","cloudinary" ],
   }
 ];
 
