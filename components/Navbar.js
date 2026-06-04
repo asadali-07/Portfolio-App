@@ -11,7 +11,7 @@ const Navbar = () => {
   const { scrollToSection } = useSmoothScroll();
   const router = useRouter();
   const pathname = usePathname();
-  
+
   // Handle scroll effects
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +21,7 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -54,27 +54,27 @@ const Navbar = () => {
   // Animation variants
   const navbarVariants = {
     initial: { opacity: 0, y: -20 },
-    animate: { 
-      opacity: 1, 
+    animate: {
+      opacity: 1,
       y: 0,
-      transition: { 
+      transition: {
         duration: 0.5,
         staggerChildren: 0.1
-      } 
+      }
     }
   };
 
   const linkVariants = {
     initial: { opacity: 0, y: -10 },
-    animate: { 
-      opacity: 1, 
+    animate: {
+      opacity: 1,
       y: 0,
-      transition: { duration: 0.3 } 
+      transition: { duration: 0.3 }
     },
-    hover: { 
-      scale: 1.1, 
-      color: "#3b82f6", 
-      transition: { type: "spring", stiffness: 300 } 
+    hover: {
+      scale: 1.1,
+      color: "#3b82f6",
+      transition: { type: "spring", stiffness: 300 }
     },
     tap: { scale: 0.95 }
   };
@@ -82,18 +82,17 @@ const Navbar = () => {
   return (
     <>
       <div className="fixed top-2 sm:top-4 left-2 right-2 sm:left-0 sm:right-0 z-50 flex justify-center">
-        <motion.nav 
-          className={`relative backdrop-blur-xl ${
-            scrolled 
-              ? 'bg-white/20 dark:bg-black/20 shadow-lg' 
-              : 'bg-white/10 dark:bg-black/10'
-          } rounded-full px-2 sm:px-3 py-2 transition-all duration-300 max-w-fit mx-auto border border-white/20 dark:border-gray-800/40 w-full sm:w-auto`}
+        <motion.nav
+          className={`relative backdrop-blur-xl ${scrolled
+            ? 'bg-white/20 dark:bg-black/20 shadow-lg'
+            : 'bg-white/10 dark:bg-black/10'
+            } rounded-full px-2 sm:px-3 py-2 transition-all duration-300 max-w-fit mx-auto border border-white/20 dark:border-gray-800/40 w-full sm:w-auto`}
           initial="initial"
           animate="animate"
           variants={navbarVariants}
         >
           {/* Animated background blob */}
-          <motion.div 
+          <motion.div
             className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-xl"
             animate={{
               scale: [1, 1.05, 1],
@@ -105,9 +104,9 @@ const Navbar = () => {
               ease: "easeInOut"
             }}
           />
-          
+
           {/* Unified Navigation for Desktop and Mobile */}
-          <motion.div 
+          <motion.div
             className="flex items-center justify-center space-x-1 px-1 sm:px-4"
             variants={navbarVariants}
           >
@@ -125,7 +124,7 @@ const Navbar = () => {
                   className="relative px-1.5 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm md:text-base text-blue-400 font-medium rounded-full hover:bg-white/10 dark:hover:bg-white/5 transition-all duration-300 whitespace-nowrap"
                 >
                   {link.label}
-                  <motion.span 
+                  <motion.span
                     className="absolute bottom-0 left-0 right-0 mx-auto w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500"
                     initial={{ width: "0%" }}
                     whileHover={{ width: "80%" }}
@@ -134,21 +133,20 @@ const Navbar = () => {
                 </Link>
               </motion.div>
             ))}
-            
-            <motion.div 
-              variants={linkVariants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="ml-1 sm:ml-2 text-blue-500 flex-shrink-0"
-            >
-              <div className="scale-75 sm:scale-100">
-                <ModeToggle />
-              </div>
-            </motion.div>
           </motion.div>
         </motion.nav>
+        <motion.div
+          variants={linkVariants}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="mr-2 sm:mr-3 text-blue-500 flex-shrink-0"
+        >
+          <div className="scale-75 sm:scale-100">
+            <ModeToggle />
+          </div>
+        </motion.div>
       </div>
-      
+
       {/* Spacer to push content below the floating navbar */}
       <div className="h-12 sm:h-16"></div>
     </>

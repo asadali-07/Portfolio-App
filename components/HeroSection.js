@@ -167,7 +167,7 @@ const HeroSection = () => {
                   <FaGithub size={20} />
                 </motion.a>
                 <motion.a 
-                  href="https://linkedin.com/in/mohd-asad-ali-1a7693257" 
+                  href="https://www.linkedin.com/in/asadali07/" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-blue-700 text-white shadow-md"

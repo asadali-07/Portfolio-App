@@ -50,7 +50,7 @@ const ContactSection = () => {
       color: "bg-gradient-to-br from-gray-700 to-gray-900"
     },
     {
-      href: "https://www.linkedin.com/in/mohd-asad-ali-1a7693257/",
+      href: "https://www.linkedin.com/in/asadali07/",
       icon: <FaLinkedin size={24} />,
       label: "LinkedIn",
       color: "bg-gradient-to-br from-blue-500 to-blue-700"

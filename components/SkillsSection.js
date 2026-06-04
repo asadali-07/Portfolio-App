@@ -97,7 +97,7 @@ export default function SkillsSection() {
               </motion.h3>
               
               <motion.div 
-                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6"
+                className="flex flex-wrap gap-3 md:gap-4"
                 variants={containerVariants}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
@@ -107,24 +107,24 @@ export default function SkillsSection() {
                     key={skill.name}
                     variants={itemVariants}
                     whileHover={{ 
-                      y: -10, 
+                      y: -5, 
                       scale: 1.05,
                       transition: { type: "spring", stiffness: 400 }
                     }}
-                    className="bg-white/10 dark:bg-gray-800/20 backdrop-blur-sm rounded-xl p-4 flex flex-col items-center justify-center gap-3 border border-transparent hover:border-blue-300/30 dark:hover:border-blue-500/30 shadow-sm hover:shadow-md transition-all duration-300"
+                    className="bg-white/50 dark:bg-gray-800/40 backdrop-blur-sm rounded-full py-2.5 px-5 flex flex-row items-center gap-3 border border-gray-200/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 shadow-sm hover:shadow-md hover:bg-white dark:hover:bg-gray-800 transition-all duration-300"
                   >
-                    <div className="w-12 h-12 md:w-14 md:h-14 relative flex items-center justify-center">
+                    <div className="w-6 h-6 md:w-8 md:h-8 relative flex items-center justify-center shrink-0">
                       <Image
                         src={skill.src}
                         alt={skill.name}
-                        width={56}
-                        height={56}
+                        width={32}
+                        height={32}
                         className="object-contain dark:filter dark:brightness-90 dark:contrast-125"
                         loading="lazy"
                         draggable="false"
                       />
                     </div>
-                    <span className="text-sm text-blue-600 dark:text-blue-400 font-medium text-center">
+                    <span className="text-sm md:text-base text-gray-700 dark:text-gray-200 font-medium text-center">
                       {skill.name}
                     </span>
                   </motion.div>

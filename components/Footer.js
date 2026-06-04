@@ -124,7 +124,7 @@ const Footer = () => {
                 <Link href="#contact" className="hover:text-blue-500 transition-colors">Contact</Link>
               </motion.li>
               <motion.li whileHover={{ scale: 1.1, color: "#3b82f6" }}>
-                <Link href="project" className="hover:text-blue-500 transition-colors">Projects</Link>
+                <Link href="projects" className="hover:text-blue-500 transition-colors">Projects</Link>
               </motion.li>
               <motion.li whileHover={{ scale: 1.1, color: "#3b82f6" }}>
                 <Link href="termcondition" className="hover:text-blue-500 transition-colors">Terms & Conditions</Link>
@@ -158,7 +158,7 @@ const Footer = () => {
                 />
               </motion.a>
               <motion.a 
-                href="https://linkedin.com/in/mohd-asad-ali-1a7693257" 
+                href="https://www.linkedin.com/in/asadali07/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative bg-gradient-to-br from-blue-600 to-blue-700 p-3 rounded-full text-white shadow-md hover:shadow-lg"
